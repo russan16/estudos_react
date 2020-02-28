@@ -12,7 +12,6 @@ export default class Main extends Component {
     loadProducts = async () => {
         const response = await api.get('/products');
         this.setState({products: response.data.docs});
-        console.log(response.data);
     }
 
     render() {
@@ -23,7 +22,7 @@ export default class Main extends Component {
                     <li key={product._id}>
                         <h2>{product.title}</h2>
                         <h4>{product.description}</h4>
-                        <a href={product.url} target="_blank">Acessar</a>
+                        <a href={product.url} target="_blank"  rel="noopener noreferrer">Acessar</a>
                     </li>
                 ))}
             </ul>
