@@ -23,10 +23,6 @@
     width: calc(33.3333333333% - 10px);
 }
 
-.product-list li:nth-of-type(3n-3) {
-    margin-right: 0
-}
-
 .product-list li h2 {
     text-transform: capitalize;
 }

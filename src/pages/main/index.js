@@ -35,17 +35,19 @@ export default class Main extends Component {
     render() {
         const {products, page, productInfo} = this.state;
         return (
-            <ul className="product-list">
+            <ul className="list-unstyled d-flex flex-row flex-wrap">
                 {products.map(product => (
-                    <li key={product._id}>
-                        <h2>{product.title}</h2>
-                        <h4>{product.description}</h4>
-                        <a href={product.url} target="_blank" rel="noopener noreferrer">Acessar</a>
+                    <li key={product._id} className="border p-3 col-4 flex-column justify-content-between">
+                        <div className="w-100">
+                            <h2 className="text-capitalize display-3">{product.title}</h2>
+                            <h4 className="text-muted">{product.description}</h4>
+                        </div>
+                        <a href={product.url} target="_blank" rel="noopener noreferrer" className="btn btn-secondary mt-3">Acessar</a>
                     </li>
                 ))}
-                <div className="pagination">
-                    <button disabled={page === 1} onClick={this.prevPage} id="prev">Anterior</button>
-                    <button disabled={page === productInfo.pages} onClick={this.nextPage} id="next">Próximo</button>
+                <div className="d-flex flex-row justify-content-between w-100 mt-4">
+                    <button disabled={page === 1} onClick={this.prevPage} id="prev" className="btn btn-primary">Anterior</button>
+                    <button disabled={page === productInfo.pages} onClick={this.nextPage} id="next" className="btn btn-primary">Próximo</button>
                 </div>
             </ul>
         );
