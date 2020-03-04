@@ -40,8 +40,8 @@ export default class Main extends Component {
                     <li key={product._id} className="p-2 col-3">
                         <div className="border rounded bg-light shadow p-3 flex-column d-flex justify-content-between h-100">
                             <div className="w-100">
-                                <h2 className="text-capitalize h2 font-weight-light">{product.title}</h2>
-                                <h4 className="text-muted h5">{product.description}</h4>
+                                <h2 className="text-capitalize h2">{product.title}</h2>
+                                <h4 className="text-muted h5 font-weight-light">{product.description}</h4>
                             </div>
                             <div className="mt-3 d-flex flex-row justify-content-end">
                                 <a href={product.url} target="_blank" rel="noopener noreferrer" className="btn btn-secondary">Ir para o projeto</a>
