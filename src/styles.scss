@@ -1,0 +1,6 @@
+.btn-primary[disabled] {
+  cursor: not-allowed;
+  &:hover {
+    opacity: .5;
+  }
+}
