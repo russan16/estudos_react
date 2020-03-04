@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import api from '../../services/api';
+import {Link} from "react-router-dom";
 
 export default class Main extends Component {
     state = {
@@ -41,10 +42,9 @@ export default class Main extends Component {
                         <div className="border rounded bg-light shadow p-3 flex-column d-flex justify-content-between h-100">
                             <div className="w-100">
                                 <h2 className="text-capitalize h2">{product.title}</h2>
-                                <h4 className="text-muted h5 font-weight-light">{product.description}</h4>
                             </div>
                             <div className="mt-3 d-flex flex-row justify-content-end">
-                                <a href={product.url} target="_blank" rel="noopener noreferrer" className="btn btn-secondary">Ir para o projeto</a>
+                                <Link to={`/product/${product._id}`} className="btn btn-secondary">Saiba mais</Link>
                             </div>
                         </div>
                     </li>
