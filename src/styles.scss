@@ -1,6 +1,12 @@
 .btn-primary[disabled] {
   cursor: not-allowed;
+
   &:hover {
     opacity: .5;
   }
+}
+
+.navbar-brand {
+  width: 45px;
+  height: 45px;
 }

@@ -36,24 +36,15 @@ export default class Main extends Component {
     render() {
         const {products, page, productInfo} = this.state;
         return (
-            <ul className="list-unstyled d-flex flex-row flex-wrap">
+            <div className="list-group col-12 col-md-3 col-lg-2">
                 {products.map(product => (
-                    <li key={product._id} className="p-2 col-3">
-                        <div className="border rounded bg-light shadow p-3 flex-column d-flex justify-content-between h-100">
-                            <div className="w-100">
-                                <h2 className="text-capitalize h2">{product.title}</h2>
-                            </div>
-                            <div className="mt-3 d-flex flex-row justify-content-end">
-                                <Link to={`/product/${product._id}`} className="btn btn-secondary">Saiba mais</Link>
-                            </div>
-                        </div>
-                    </li>
+                    <Link key={product._id} to={`/products/${product._id}`} className="text-capitalize list-group-item list-group-item-action">{product.title}</Link>
                 ))}
-                <li className="d-flex flex-row justify-content-center w-100 mt-4">
+                <div className="d-flex flex-row justify-content-center w-100 mt-4">
                     <button disabled={page === 1} onClick={this.prevPage} id="prev" className="mr-3 btn btn-primary">Anterior</button>
                     <button disabled={page === productInfo.pages} onClick={this.nextPage} id="next" className="btn btn-primary">Próximo</button>
-                </li>
-            </ul>
+                </div>
+            </div>
         );
     }
 }

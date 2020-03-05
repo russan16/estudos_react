@@ -17,7 +17,7 @@ export default class Product extends Component {
 
         return (
             <div className="product-info col-12 mt-5">
-                <h1 className="display-3">{product.title}</h1>
+                <h1 className="display-3 text-capitalize">{product.title}</h1>
                 <p className="text-muted">{product.description}</p>
                 <a href={product.url} className="btn btn-info">Link do GitHub</a>
             </div>
